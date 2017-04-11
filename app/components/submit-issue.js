@@ -4,12 +4,14 @@ export default Ember.Component.extend({
     
     store : Ember.inject.service(),
     IssueTitle : '',
+  
     actions:{
         submit : function(){
                 console.log("submitting");
                 var store = this.get('store');
                 
                 
+            
                 var 
                     IssueTitle = this.get('IssueTitle'),
                     IssueDescription = this.get('IssueDescription'),
@@ -30,7 +32,9 @@ export default Ember.Component.extend({
                     "owner" : IssueOwner, 
                     "status" : "open" //new issues are always should be open
                 });
-                issue.save();
+                issue.save().then(function(response){
+                    console.log(response);
+                });
         }
     }
 });
