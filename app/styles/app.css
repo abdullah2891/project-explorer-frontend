@@ -56,3 +56,12 @@ div {
     padding-right :2px;
     padding-left  : 2px;
 }
+
+.issue > li {
+    border-color : #63E5C4;
+}    
+
+.update-button{
+    float : right;
+    cursor : pointer; 
+}
