@@ -65,3 +65,7 @@ div {
     float : right;
     cursor : pointer; 
 }
+
+.column .list-group-item{
+    padding : 0px 0px 0px 5px;
+}
