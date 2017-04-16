@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-4 column">
             {{#each model as |post|}}
-                        {{#if (compare-string post.status 'hold') }}
+                        {{#if (compare-string post.status 'working') }}
                             <li class="list-group-item">
                                 {{issue-card post = post}}
                             </li>
