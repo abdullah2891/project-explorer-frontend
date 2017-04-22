@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    
+    showForm : false, 
     store : Ember.inject.service(),
     IssueTitle : '',
   
@@ -35,6 +35,10 @@ export default Ember.Component.extend({
                 issue.save().then(function(response){
                     console.log(response);
                 });
+        }, 
+        submit_issue: function(){
+            console.log("showForm");
+            this.toggleProperty('showForm');
         }
     }
 });

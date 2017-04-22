@@ -1,12 +1,39 @@
-<div>
-    <label>Title</label>
-    {{input value=IssueTitle placeholder="Issue title"}}
+<p>Make New Issue
+  <span {{action "submit_issue"}} class="glyphicon glyphicon-pencil submit-issue"></span>
+</p>
 
-    <label for="lname">Description</label>
-    {{input  value=IssueDescription placeholder="Issue Description"}}
+
+<div id="submit-form" class="{{if  showForm "show-form"}}">
+  <form>
+      <div class="form-group">
+        <label>Title</label>
+        
+        {{input value=IssueTitle placeholder="Issue title"}}
     
-    <label for="lname">Owner</label>
-    {{input  value=IssueOwner placeholder="Owner"}}
+      </div>
+      
+      <div class="form-group">
+      
+        <label>Owner</label>
+        {{input  value=IssueOwner placeholder="Issue Description"}}
+      
+      </div>
+    
+      <div class="form-group">
+        <label>Description</label>
+    
+        {{textarea  class="form-control"  value=IssueDescription placeholder="Owner"}}
+    
+      </div>
+    
+    
+    
+    
+      <button type="submit" {{action "submit"}} class="btn btn-primary">Submit</button>
+    
+    
+    
+    </form>
   
-    <input type="submit" {{action "submit"}} value="Submit">
-</div>
+  </div>
+
