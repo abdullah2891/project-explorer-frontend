@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     store : Ember.inject.service(),
-
+    issues(){
+        var issue = this.get('store').findAll('issue');
+        console.log(issue);
+        return issue;
+    }, 
     actions:{
         updateIssue : function(id){
             var store = this.get('store'); 
@@ -16,8 +20,6 @@ export default Ember.Component.extend({
             
             
             store.find('issue',id).then(function(issue){
-                console.log("findRecord working?");
-                console.log(issue);
                 var status = issue.get('status'); 
                 console.log(status) ; 
                 issue.set('status', statusChange[status]); 

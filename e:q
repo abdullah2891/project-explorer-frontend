@@ -1,0 +1,56 @@
+[1mdiff --git a/app/components/submit-issue.js b/app/components/submit-issue.js[m
+[1mindex 1646807..3ef7106 100644[m
+[1m--- a/app/components/submit-issue.js[m
+[1m+++ b/app/components/submit-issue.js[m
+[36m@@ -3,8 +3,7 @@[m [mimport Ember from 'ember';[m
+ export default Ember.Component.extend({[m
+     [m
+     store : Ember.inject.service(),[m
+[31m-    IssueTitle : '',[m
+[31m-  [m
+[32m+[m
+     actions:{[m
+         submit : function(){[m
+                 console.log("submitting");[m
+[36m@@ -35,15 +34,6 @@[m [mexport default Ember.Component.extend({[m
+                 issue.save().then(function(response){[m
+                     console.log(response);[m
+                 });[m
+[31m-        }, [m
+[31m-        st: function(){[m
+[31m-             var [m
+[31m-                    IssueTitle = this.get('IssueTitle'),[m
+[31m-                    IssueDescription = this.get('IssueDescription'),[m
+[31m-                    IssueOwner = this.get('IssueOwner')[m
+[31m-                ;[m
+[31m-            [m
+[31m-            console.log("button clicking",IssueTitle, IssueDescription , IssueOwner);[m
+         }[m
+     }[m
+ });[m
+[1mdiff --git a/app/styles/app.css b/app/styles/app.css[m
+[1mindex 6e21813..70905a9 100644[m
+[1m--- a/app/styles/app.css[m
+[1m+++ b/app/styles/app.css[m
+[36m@@ -50,7 +50,7 @@[m [mdiv {[m
+ }[m
+ [m
+ .container-fluid{[m
+[31m-    padding: 10px, 0px,0px, 10px;[m
+[32m+[m[32m    padding: 0px;[m
+ }[m
+ [m
+ .col-sm-4{[m
+[1mdiff --git a/app/templates/components/submit-issue.hbs b/app/templates/components/submit-issue.hbs[m
+[1mindex fec8f0b..dcc4fc0 100644[m
+[1m--- a/app/templates/components/submit-issue.hbs[m
+[1m+++ b/app/templates/components/submit-issue.hbs[m
+[36m@@ -17,7 +17,7 @@[m
+   <div class="form-group">[m
+     <label>Description</label>[m
+ [m
+[31m-    {{textarea  class="form-control"  value=IssueDescription placeholder="Owner"}}[m
+[32m+[m[32m    {{textarea  class="form-control"  value=IssueDescription placeholder="Description"}}[m
+ [m
+   </div>[m
+ [m
