@@ -6,84 +6,19 @@ body{
       background: linear-gradient(to right, #5A5AFF , #A0A0FF); /* Standard syntax */
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color :black;
+
+
+.list-group-item{
+    border : none;
 }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+.list-group-item .update-button{
+    float: right;
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-div {
-    border-radius: 5px;
-    /*background-color: #f2f2f2;*/
-    padding: 10px;
-}
-
-.dashboard , .dashboard.column {
-    /*background-color : #103166 ;*/
-    /*border-style : solid;*/
-    /*border-color : black;*/
-    /*border-width : 5px;*/
-}
-
-.list-group-item {
-    font-family : "Comic Sans MS", cursive, sans-serif;
-    color: black;
-    margin-top :2px ;
-    /*background-color : #63E5C4;*/
-}
-
-.container-fluid{
-    padding: 10px, 0px,0px, 10px;
-}
-
-.col-sm-4{
-    padding-right :2px;
-    padding-left  : 2px;
-}
-
-.issue > li {
-    border-color : white;
-}    
-
-.update-button{
-    float : right;
-    cursor : pointer; 
-}
-
-.column .list-group-item{
-    padding : 0px 0px 0px 5px;
-}
-
-.submit-issue{
-    cursor : pointer;
-    float : right;
-}
-
-#submit-form{
-    display : none;
-}
-
-.show-form {
-    display: block !important;
-    /*opacity: 1 !important;*/
+.dashboard .list-group-item {
+    margin :10px;
+    padding :5px;
+    
 }
