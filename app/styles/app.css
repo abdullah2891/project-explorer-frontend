@@ -1,6 +1,9 @@
 body{
-    color :white;
-    background-color : #f7093d;
+    background-color : #5050FF;
+    background: -webkit-linear-gradient(left, #5A5AFF , #A0A0FF); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, #5A5AFF, #A0A0FF); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, #5A5AFF, #A0A0FF); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, #5A5AFF , #A0A0FF); /* Standard syntax */
 }
 
 input[type=text], select {
@@ -36,17 +39,17 @@ div {
 }
 
 .dashboard , .dashboard.column {
-    background-color : #103166 ;
-    border-style : solid;
-    border-color : black;
-    border-width : 5px;
+    /*background-color : #103166 ;*/
+    /*border-style : solid;*/
+    /*border-color : black;*/
+    /*border-width : 5px;*/
 }
 
 .list-group-item {
     font-family : "Comic Sans MS", cursive, sans-serif;
     color: black;
     margin-top :2px ;
-    background-color : #63E5C4;
+    /*background-color : #63E5C4;*/
 }
 
 .container-fluid{
@@ -59,7 +62,7 @@ div {
 }
 
 .issue > li {
-    border-color : #63E5C4;
+    border-color : white;
 }    
 
 .update-button{
