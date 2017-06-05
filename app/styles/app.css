@@ -1,4 +1,4 @@
-body{
+.container-fluid{
     background-color : #5050FF;
     background: -webkit-linear-gradient(left, #5A5AFF , #A0A0FF); /* For Safari 5.1 to 6.0 */
       background: -o-linear-gradient(right, #5A5AFF, #A0A0FF); /* For Opera 11.1 to 12.0 */
@@ -21,4 +21,7 @@ body{
     margin :10px;
     padding :5px;
     
+}
+.hide-modal {
+    display: none;
 }
