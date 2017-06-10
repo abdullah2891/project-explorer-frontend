@@ -17,8 +17,6 @@ export default Ember.Component.extend({
                     "closed" : "open"
             };
             
-            
-            
             store.find('issue',id).then(function(issue){
                 var status = issue.get('status'); 
                 console.log(status) ; 
@@ -30,6 +28,15 @@ export default Ember.Component.extend({
             
             
             console.log("clicked",id);
+        }, 
+        deleteIssue : function(id){
+            var store = this.get('store'); 
+            console.log("delete clcked");
+            store.find('issue',id).then(function(issue){
+                issue.destroyRecord();
+            });
+            
+            
         }
     }
 });
