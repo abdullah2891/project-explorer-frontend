@@ -20,7 +20,7 @@ body{
 .dashboard .list-group-item {
     margin :10px;
     padding :5px;
-    
+    overflow-wrap : break-word;
 }
 .hide-modal {
     display: none;
